@@ -774,14 +774,14 @@ const data = [
     "wordNo": 135,
     "word": "prejudice",
     "choices": [
-      "偏見",
+      "見解",
       "すき間",
       "青年",
       "先入観"
     ],
     "correct": 3,
     "sentence": "We should judge a person without racial prejudice.",
-    "jp": "私たちは人種的偏見をもたずに人を評価しなければならない。"
+    "jp": "私たちは人種的先入観をもたずに人を評価しなければならない。"
   },
   {
     "id": 557,
