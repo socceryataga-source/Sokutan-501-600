@@ -1,0 +1,275 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  background: linear-gradient(180deg, #eef3f8 0%, #f7f9fc 100%);
+  color: #1f2937;
+}
+
+.page {
+  min-height: calc(100vh - 80px);
+  padding: 24px 14px 40px;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  letter-spacing: 0.02em;
+}
+
+.hero p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
+  border: 1px solid #e6ebf2;
+  padding: 22px;
+}
+
+.settings-card, .quiz-card, .result-card {
+  margin-top: 8px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+label span, .block-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #cfd8e3;
+  font-size: 1rem;
+  background: #fbfdff;
+}
+
+.mode-block {
+  margin-top: 18px;
+}
+
+.mode-buttons, .action-row, .nav-row, .menu-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mode-btn, .primary-btn, .secondary-btn, .ghost-btn, .choice-btn, .audio-btn {
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+  font-size: 0.98rem;
+}
+
+.mode-btn:hover, .primary-btn:hover, .secondary-btn:hover, .ghost-btn:hover, .choice-btn:hover, .audio-btn:hover {
+  transform: translateY(-1px);
+}
+
+.mode-btn {
+  padding: 12px 16px;
+  background: #edf2f7;
+  color: #334155;
+}
+
+.mode-btn.active {
+  background: #1d4ed8;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.18);
+}
+
+.primary-btn {
+  padding: 12px 20px;
+  background: #0f766e;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.secondary-btn {
+  padding: 11px 18px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.ghost-btn {
+  padding: 11px 16px;
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #d7dee8;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.word-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.word-row h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  color: #0f172a;
+  letter-spacing: 0.02em;
+}
+
+.audio-btn {
+  width: 46px;
+  height: 46px;
+  background: #eff6ff;
+  font-size: 1.2rem;
+}
+
+.subinfo {
+  margin: 8px 0 18px;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.choices {
+  display: grid;
+  gap: 10px;
+}
+
+.choice-btn {
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  background: #f8fafc;
+  color: #1f2937;
+  border: 1px solid #dbe2ea;
+  line-height: 1.5;
+}
+
+.choice-btn.correct {
+  background: #dcfce7;
+  border-color: #22c55e;
+}
+
+.choice-btn.wrong {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+.choice-btn.disabled {
+  cursor: default;
+  opacity: 0.95;
+}
+
+.feedback {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  line-height: 1.75;
+}
+
+.feedback strong {
+  color: #0f172a;
+}
+
+.feedback .ok {
+  color: #15803d;
+  font-weight: 700;
+}
+
+.feedback .ng {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.nav-row {
+  margin-top: 18px;
+}
+
+.menu-row {
+  margin-top: 12px;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.result-card h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+.footer-note {
+  text-align: center;
+  padding: 10px 16px 24px;
+  font-size: 0.86rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 18px 10px 30px;
+  }
+
+  .card {
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    font-size: 0.9rem;
+  }
+
+  .word-row h2 {
+    font-size: 1.9rem;
+  }
+
+  .mode-buttons, .action-row, .nav-row, .menu-row {
+    flex-direction: column;
+  }
+
+  .mode-btn, .primary-btn, .secondary-btn, .ghost-btn {
+    width: 100%;
+  }
+}
